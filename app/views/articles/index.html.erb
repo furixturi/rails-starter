@@ -6,7 +6,13 @@
   <% @articles.each do |article| %>
     <article>
       <h2><%= article.title %></h2>
-      <div><%= article.text %> <%= link_to 'Show', article_path(article) %></div>
+      <div>
+        <%= article.text %>
+      </div>
+      <div>
+        <%= link_to 'Show', article_path(article) %>
+        <%= link_to 'Edit', edit_article_path(article) %>
+      </div>
     </article>
   <% end %>
 </section>
