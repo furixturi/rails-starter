@@ -1,0 +1,15 @@
+<h1>All Rabit Articles</h1>
+<section>
+  <%= link_to 'New Article...', new_article_path %>
+</section>
+<section>
+  <% @articles.each do |article| %>
+    <article>
+      <h2><%= article.title %></h2>
+      <div><%= article.text %> <%= link_to 'Show', article_path(article) %></div>
+    </article>
+  <% end %>
+</section>
+<section>
+  <%= link_to 'Home', root_path %>
+</section>
